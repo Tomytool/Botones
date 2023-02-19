@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(232, 236, 240);
+}
+
+.contenedor {
+  width: 70%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+.contenedor .contenedor_img {
+  height: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.contenedor .contenedor_img .tultip {
+  padding: 8px 20px;
+  background-color: aqua;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.6s;
+  position: relative;
+  z-index: 2;
+}
+.contenedor .contenedor_img .tultip::after {
+  content: " ";
+  position: absolute;
+  background-color: aqua;
+  width: 15px;
+  height: 15px;
+  bottom: -7px;
+  left: 42%;
+  transform: rotate(45deg);
+}
+.contenedor .contenedor_img img {
+  width: 45px;
+  height: 45px;
+  background-color: cadetblue;
+  padding: 9px;
+  border-radius: 50%;
+  z-index: 3;
+  cursor: pointer;
+}
+.contenedor .contenedor_img img:hover ~ .tultip {
+  transform: translateY(-15px);
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */
